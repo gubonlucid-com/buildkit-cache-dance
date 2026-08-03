@@ -58,13 +58,10 @@ GUBON/
 ├── tsconfig.json
 └── ...
 
-目前不要急著 Commit
 
-你現在最正確的順序是：
-
-修改 app/page.tsx
+ app/page.tsx
         ↓
-儲存
+
         ↓
 npm run build
         ↓
@@ -74,11 +71,11 @@ Commit
         ↓
 Push
         ↓
-Vercel 自動部署
+Vercel 
         ↓
 Production URL
         ↓
-瀏覽器實測
 
-目前狀態：NOT VERIFIED 
+
+   NOT VERIFIED 
 
