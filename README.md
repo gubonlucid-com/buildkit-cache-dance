@@ -1,9 +1,7 @@
 
 GitHub Repository
 └── app/
-    └── page.tsx    ← 只放 GUBON 首頁 React 程式碼
-
-你貼在最前面的：
+    └── page.tsx    ←  GUBON React 
 
 name: Build
 on: push
@@ -12,13 +10,10 @@ jobs:
   build:
     ...
 
-是 GitHub Actions / Docker BuildKit workflow，不能放進 page.tsx。
-
-你現在直接這樣做
+ GitHub Actions / Docker BuildKit workflow
 
 ① app/page.tsx
-
-把原本 Next.js 預設內容全部刪掉，只留下我上一則給你的：
+ Next.js 
 
 export default function Home() {
   return (
@@ -30,15 +25,12 @@ export default function Home() {
 
 ② app/layout.tsx
 
-如果你已經要加入 Vercel Analytics，才在這裡加入：
+ Vercel Analytics,
 
 import { Analytics } from "@vercel/analytics/next";
 
-以及：
-
 <Analytics />
 
-③ 不要把這些東西放進 page.tsx
 
 Docker BuildKit
 GitHub Actions
@@ -47,13 +39,10 @@ jobs:
 runs-on
 docker/build-push-action
 
-它們應該放在：
-
 .github/
 └── workflows/
     └── build.yml
 
-例如：
 
 GUBON/
 ├── app/
