@@ -228,6 +228,7 @@ export default function Home() {
     </main>
   );
 }
+
 檔案位置
 
 如果你目前是標準 Next.js App Router：
